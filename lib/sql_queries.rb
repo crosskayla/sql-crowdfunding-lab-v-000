@@ -30,7 +30,8 @@ AS amount_remaining
 FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.user_id
-WHERE SUM(pledges.amount) > projects.funding_goal
+GROUP BY amount_remaining
+HAVING amount_remaining > 0
 "
 end
 

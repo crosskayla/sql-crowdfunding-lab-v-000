@@ -25,7 +25,9 @@ GROUP BY users.name
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECT projects.title, DIFFERENCE(projects.funding_goal, SUM(pledges.amount)
+"SELECT projects.title, DIFFERENCE(projects.funding_goal, SUM(pledges.amount))
+FROM projects
+INNER JOIN pledges
 
 "
 end

@@ -29,7 +29,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
 AS amount_remaining
 FROM projects
 INNER JOIN pledges
-ON projects.id = pledges.user_id
+ON projects.id = pledges.project_id
 GROUP BY projects.title
 HAVING amount_remaining >= 0
 "

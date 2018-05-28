@@ -30,7 +30,6 @@ FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.user_id
 WHERE SUM(pledges.amount) > projects.funding_goal
-
 "
 end
 

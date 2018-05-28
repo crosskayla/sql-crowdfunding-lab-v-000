@@ -41,7 +41,7 @@ AS pledge_amount
 FROM users
 INNER JOIN pledges
 ON users.id = pledges.user_id
-GROUP BY pledge_amount, users.name
+GROUP BY users.name
 "
 end
 

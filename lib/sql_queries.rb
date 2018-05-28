@@ -31,7 +31,7 @@ FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.user_id
 GROUP BY projects.title
-HAVING amount_remaining > 0
+HAVING amount_remaining >= 0
 "
 end
 
